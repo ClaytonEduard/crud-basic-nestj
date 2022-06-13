@@ -1,5 +1,4 @@
 // Criar o pacote de crud
 nest g resource users
     Rest API
-//adiconar Class trasnformer
-yarn add class-transformer
+adiconar yarn 
