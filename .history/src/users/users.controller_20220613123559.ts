@@ -34,5 +34,10 @@ export class UsersController {
   @Delete(':id')
   remove(@Param('id') id: number) {
     return this.usersService.remove(id);
+    this.usersService.findOne(id);
+    if (!user) {
+      throw new NotFoundException(`User does not exist`);
+    }
+    return user;
   }
 }

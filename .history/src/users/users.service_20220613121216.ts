@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
@@ -30,30 +30,16 @@ export class UsersService {
 
   // bucar usuario pelo id
   findOne(id: number) {
-    const index = this.users.findIndex(user => user.id === id);
-    return this.users[index];
+    const u = this.
+
+    return `This action returns a #${id} user`;
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
-    // pegar o usuario
-    const user = this.findOne(id);
-    // instancia um novo user parssando os dados para updateUserDto
-    const newUser = {
-      ...user,
-      ...updateUserDto,
-    }
-    // procura a possicao do usuario no array do cadastro e muda  os dados do index
-    const index = this.users.findIndex(user => user.id === id);
-    this.users[index] = newUser;
-    return newUser;
+    return `This action updates a #${id} user`;
   }
-  // deletar user
+
   remove(id: number) {
-    const index = this.users.findIndex(user => user.id === id);
-    if(index===-1) {
-      throw new NotFoundException(`User with id ${id} does not exist`);
-    }
-    this.users.splice(index, 1);
-    return `User delete sucess`
+    return `This action removes a #${id} user`;
   }
 }

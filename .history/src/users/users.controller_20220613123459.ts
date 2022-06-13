@@ -5,7 +5,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) { }
+  constructor(private readonly usersService: UsersService) {}
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
@@ -20,10 +20,10 @@ export class UsersController {
   @Get(':id')
   findOne(@Param('id') id: number) {
     const user = this.usersService.findOne(id);
-    if (!user) {
-      throw new NotFoundException(`User does not exist`);
+    if(!user){
+      throw new NotFoundException(`User does `)
     }
-    return user;
+    return this.usersService.findOne(id);
   }
 
   @Patch(':id')
