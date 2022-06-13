@@ -3,5 +3,3 @@ nest g resource users
     Rest API
 //adiconar Class trasnformer
 yarn add class-transformer
-yarn add class-validator
-yarn add node-emoji

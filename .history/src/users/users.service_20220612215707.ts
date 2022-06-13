@@ -20,11 +20,11 @@ export class UsersService {
     };
     this.users.push(user);
 
-    return user;
+    return 'This action adds a new user';
   }
-// listar todo os usuarios
+
   findAll() {
-    return this.users;
+    return `This action returns all users`;
   }
 
   findOne(id: number) {

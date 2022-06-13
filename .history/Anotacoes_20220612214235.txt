@@ -4,4 +4,3 @@ nest g resource users
 //adiconar Class trasnformer
 yarn add class-transformer
 yarn add class-validator
-yarn add node-emoji

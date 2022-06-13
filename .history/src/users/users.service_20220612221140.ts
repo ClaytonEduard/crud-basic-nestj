@@ -22,7 +22,7 @@ export class UsersService {
 
     return user;
   }
-// listar todo os usuarios
+// listar todo os usuaris
   findAll() {
     return this.users;
   }

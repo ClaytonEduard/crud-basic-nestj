@@ -9,22 +9,12 @@ export class UsersService {
 
   create(createUserDto: CreateUserDto) {
     // se o user nao tiver id cria um
-    const currentMaxId = this.users[this.users.length - 1]?.id || 0;
-
-    // populando o id
-    const id = currentMaxId + 1;
-    // cria o usuario passando o id e populando o restande pelo spreed
-    const user = {
-      id,
-      ...createUserDto,
-    };
-    this.users.push(user);
-
-    return user;
+    const currentUser = this.users[this.users.length - 1]?.id || 0;
+    return 'This action adds a new user';
   }
-// listar todo os usuarios
+
   findAll() {
-    return this.users;
+    return `This action returns all users`;
   }
 
   findOne(id: number) {

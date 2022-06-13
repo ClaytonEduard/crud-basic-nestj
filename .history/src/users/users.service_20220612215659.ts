@@ -18,13 +18,13 @@ export class UsersService {
       id,
       ...createUserDto,
     };
-    this.users.push(user);
+    this.u
 
-    return user;
+    return 'This action adds a new user';
   }
-// listar todo os usuarios
+
   findAll() {
-    return this.users;
+    return `This action returns all users`;
   }
 
   findOne(id: number) {

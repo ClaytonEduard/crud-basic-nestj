@@ -22,9 +22,9 @@ export class UsersService {
 
     return user;
   }
-// listar todo os usuarios
+
   findAll() {
-    return this.users;
+    return `This action returns all users`;
   }
 
   findOne(id: number) {
